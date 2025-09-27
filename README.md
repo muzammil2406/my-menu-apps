@@ -2,7 +2,8 @@
 
 > An accessible, animated nested drawer menu component built with React and TypeScript, designed for exceptional user experience and accessibility standards.
 
-![Component Preview](https://via.placeholder.com/600x400/1f2937/ffffff?text=Nested+Menu+Drawer+Preview)
+<img width="1919" height="909" alt="image" src="https://github.com/user-attachments/assets/dc7ea129-ecf4-4d1b-a9c7-62b402a31276" />
+
 
 ## ✨ Features
 
@@ -182,3 +183,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
     <a href="#top">⬆️ Back to Top</a>
   </p>
 </div>
+
