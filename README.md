@@ -1,202 +1,184 @@
-Nested Menu Drawer – Design Engineer Assignment
+# Nested Menu Drawer
 
-An accessible, animated nested drawer menu built with React and TypeScript, focused on polished user experience, smooth transitions, and strong accessibility.
+> An accessible, animated nested drawer menu component built with React and TypeScript, designed for exceptional user experience and accessibility standards.
 
-✅ Overview
+![Component Preview](https://via.placeholder.com/600x400/1f2937/ffffff?text=Nested+Menu+Drawer+Preview)
 
-This component provides:
+## ✨ Features
 
-Multi-level nested menu navigation
+- 🚀 **Multi-level Navigation** - Seamless nested menu structure with unlimited depth
+- 🎨 **Smooth Animations** - Direction-aware slide transitions with GPU acceleration
+- ♿ **Full Accessibility** - WCAG 2.1 compliant with screen reader support
+- ⌨️ **Keyboard Navigation** - Complete keyboard control with intuitive shortcuts
+- 📱 **Responsive Design** - Adaptive layout for all screen sizes
+- 🎯 **Focus Management** - Proper focus trapping and restoration
+- ⚡ **Performance Optimized** - 60fps animations with minimal re-renders
+- 🎛️ **Highly Customizable** - Flexible theming and configuration options
 
-Smooth, direction-aware transitions
+## 🚀 Quick Start
 
-Back navigation with proper history tracking
+### Installation
 
-Keyboard accessibility and screen reader support
-
-Clean UI with responsive layout and hover states
-
-Focus management and ARIA compliance
-
-Performance-optimized animations
-
-✅ Deliverables
-
-✅ Fully functional React component
-
-✅ TypeScript-based menu model
-
-✅ Example usage with sample menu data
-
-✅ Clean and readable folder structure
-
-✅ Minimal documentation for setup and customization
-
-✅ Success Criteria
-
-✔ Smooth, direction-aware slide animations
-✔ Back navigation with history
-✔ Full keyboard accessibility
-✔ Screen reader-friendly with ARIA roles
-✔ Responsive and visually clean UI
-✔ Focus states and hover interactions
-✔ 60fps performance
-
-✅ Tech Stack
-
-You can use:
-
-React + TypeScript
-
-Animation: Framer Motion / React Spring
-
-Styling: Tailwind CSS / Styled Components / CSS Modules
-
-Accessibility: ARIA roles, keyboard events, focus trapping
-
-✅ Folder Structure (Example)
-src/
-  components/
-    NestedMenuDrawer/
-      NestedMenuDrawer.tsx
-      NestedMenuDrawer.types.ts
-      animations.ts
-      accessibility.ts
-      styles.(css|ts)
-      index.ts
-  data/
-    sampleMenuData.ts
-  App.tsx
-
-✅ Menu Structure (Type Model)
-
-Each menu item contains:
-
-id
-
-label
-
-Optional: children, icon, href, onSelect, disabled, ariaLabel
-
-The top level represents the root menu.
-
-✅ Accessibility Requirements
-
-Focus trap inside drawer
-
-Initial focus on first interactive element
-
-Return focus on close
-
-Esc to close, Enter/Space to select
-
-ArrowUp/Down to navigate items
-
-Backspace/ArrowLeft to go up a level
-
-role="menu" and role="menuitem" usage
-
-ARIA attributes for hierarchy
-
-✅ Animations (Expectations)
-
-Direction-aware transitions:
-
-Forward (into submenu) → slide left
-
-Backward (go back) → slide right
-
-Animate only one level at a time
-
-Use transform for GPU acceleration
-
-Short animation duration (~200ms)
-
-✅ Customization Options
-
-You may support:
-
-Custom drawer width
-
-Left or right side slide-in
-
-Override rendering of menu items
-
-Optional header content
-
-Theming via class names or CSS variables
-
-✅ Example Usage (Conceptual)
-
-A parent component should be able to:
-
-Pass root menu data
-
-Control open/close state
-
-Customize rendering if needed
-
-No code is shown here since requested.
-
-✅ Testing Checklist
-
-Open/close correctly
-
-Enter submenu and go back
-
-Keyboard navigation works fully
-
-Screen reader announces levels
-
-Focus remains inside drawer
-
-Responsive on different screen sizes
-
-Animations stay smooth
-
-✅ Performance
-
-Avoid unnecessary re-renders
-
-Use memoization where needed
-
-Animate only container, not each item
-
-GPU-accelerated transforms
-
-✅ Final Notes
-
-This component should feel polished, accessible, and intuitive, matching modern UI standards. Focus on:
-
-UX clarity
-
-Code quality
-
-Accessibility
-
-
-
-▶️ Run the Project
-✅ 1. Install dependencies
+```bash
+# npm
 npm install
 
-
-(or)
-
+# yarn
 yarn install
 
-✅ 2. Start the development server
+# pnpm
+pnpm install
+```
+
+### Development
+
+```bash
+# Start development server
 npm run dev
+# or
+yarn dev
+```
 
+### Production
 
-(or, if using Create React App)
-
-npm start
-
-✅ 3. Build for production (if needed)
+```bash
+# Build for production
 npm run build
 
-✅ 4. Preview production build (optional)
+# Preview production build
 npm run preview
+```
 
-Reusability
+## 📋 Component Overview
+
+### Core Capabilities
+
+- **Nested Navigation**: Navigate through multiple menu levels with smooth transitions
+- **Back Navigation**: Intuitive breadcrumb-style navigation with history tracking
+- **Direction-Aware Animations**: Forward slides left, backward slides right
+- **Accessibility First**: Full ARIA compliance and keyboard navigation
+- **Focus Management**: Automatic focus handling and trap management
+- **Customizable**: Extensive theming and configuration options
+
+### Animation System
+
+- **Forward Navigation**: Slide left transition (→)
+- **Backward Navigation**: Slide right transition (←)
+- **Duration**: ~200ms for optimal perceived performance
+- **Hardware Acceleration**: GPU-optimized transforms
+- **Smooth Performance**: Consistent 60fps animations
+
+
+### Type System
+
+```typescript
+interface MenuItem {
+  id: string;
+  label: string;
+  children?: MenuItem[];
+  icon?: React.ReactNode;
+  href?: string;
+  onSelect?: () => void;
+  disabled?: boolean;
+  ariaLabel?: string;
+}
+```
+
+## ♿ Accessibility Features
+
+### Keyboard Navigation
+
+| Key | Action |
+|-----|--------|
+| `↑` / `↓` | Navigate menu items |
+| `Enter` / `Space` | Select menu item |
+| `←` / `Backspace` | Go back one level |
+| `Esc` | Close drawer |
+| `Tab` | Navigate between interactive elements |
+
+### Screen Reader Support
+
+- **ARIA Roles**: Proper `menu` and `menuitem` roles
+- **Hierarchy Announcements**: Clear level indicators
+- **Focus Announcements**: Current item and position
+- **State Changes**: Open/close and navigation feedback
+
+### Focus Management
+
+- ✅ Focus trap within drawer
+- ✅ Initial focus on first interactive element
+- ✅ Focus restoration on close
+- ✅ Visible focus indicators
+- ✅ Logical tab order
+
+
+## 🧪 Testing Checklist
+
+### Functionality
+- [ ] Opens and closes correctly
+- [ ] Navigates into submenus
+- [ ] Back navigation works properly
+- [ ] Handles empty/null menu data
+
+### Accessibility
+- [ ] Full keyboard navigation
+- [ ] Screen reader compatibility
+- [ ] Focus management
+- [ ] ARIA attributes correct
+
+### Performance
+- [ ] Smooth 60fps animations
+- [ ] No unnecessary re-renders
+- [ ] Responsive on all devices
+- [ ] Memory leak prevention
+
+## 🔧 Technical Requirements
+
+### Dependencies
+
+- **React** ^18.0.0
+- **TypeScript** ^4.9.0
+- **Framer Motion** ^10.0.0 (for animations)
+- **Tailwind CSS** ^3.3.0 (for styling)
+
+### Browser Support
+
+- Chrome/Edge 88+
+- Firefox 85+
+- Safari 14+
+- Mobile browsers (iOS 14+, Android 8+)
+
+## 🚀 Performance Optimizations
+
+- **Memoization**: React.memo for component optimization
+- **Virtual Scrolling**: For large menu datasets
+- **GPU Acceleration**: CSS transforms for animations
+- **Lazy Loading**: Dynamic import for heavy menu items
+- **Bundle Splitting**: Separate chunks for better loading
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Design inspiration from modern mobile app navigation patterns
+- Accessibility guidelines from WCAG 2.1 and ARIA best practices
+- Animation concepts from Material Design and Apple Human Interface Guidelines
+
+---
+
+<div align="center">
+  <p>Built with ❤️ for exceptional user experiences</p>
+  <p>
+    <a href="#top">⬆️ Back to Top</a>
+  </p>
+</div>
