@@ -1,0 +1,127 @@
+
+[
+  {
+    "id": "home",
+    "title": "Home",
+    "icon": "Home",
+    "href": "/"
+  },
+  {
+    "id": "products",
+    "title": "Products",
+    "icon": "ShoppingBag",
+    "children": [
+      {
+        "id": "electronics",
+        "title": "Electronics",
+        "icon": "Laptop",
+        "children": [
+          {
+            "id": "laptops",
+            "title": "Laptops",
+            "icon": "Laptop",
+            "href": "/products/electronics/laptops"
+          },
+          {
+            "id": "smartphones",
+            "title": "Smartphones",
+            "icon": "Smartphone",
+            "href": "/products/electronics/smartphones"
+          },
+          {
+            "id": "headphones",
+            "title": "Headphones",
+            "icon": "Headphones",
+            "href": "/products/electronics/headphones"
+          }
+        ]
+      },
+      {
+        "id": "apparel",
+        "title": "Apparel",
+        "icon": "Package",
+        "href": "/products/apparel"
+      }
+    ]
+  },
+  {
+    "id": "customers",
+    "title": "Customers",
+    "icon": "Users",
+    "href": "/customers"
+  },
+  {
+    "id": "analytics",
+    "title": "Analytics",
+    "icon": "BarChart",
+    "children": [
+      {
+        "id": "sales",
+        "title": "Sales",
+        "href": "/analytics/sales"
+      },
+      {
+        "id": "traffic",
+        "title": "Traffic",
+        "href": "/analytics/traffic"
+      }
+    ]
+  },
+  {
+    "id": "billing",
+    "title": "Billing",
+    "icon": "CreditCard",
+    "href": "/billing"
+  },
+  {
+    "id": "documents",
+    "title": "Documents",
+    "icon": "FileText",
+    "children": [
+      {
+        "id": "invoices",
+        "title": "Invoices",
+        "href": "/documents/invoices"
+      },
+      {
+        "id": "reports",
+        "title": "Reports",
+        "href": "/documents/reports"
+      }
+    ]
+  },
+  {
+    "id": "settings",
+    "title": "Settings",
+    "icon": "Settings",
+    "children": [
+      {
+        "id": "profile",
+        "title": "Profile",
+        "href": "/settings/profile"
+      },
+      {
+        "id": "integrations",
+        "title": "Integrations",
+        "icon": "FileCog",
+        "children": [
+          {
+            "id": "api-keys",
+            "title": "API Keys",
+            "href": "/settings/integrations/api"
+          },
+          {
+            "id": "webhooks",
+            "title": "Webhooks",
+            "href": "/settings/integrations/webhooks"
+          }
+        ]
+      },
+      {
+        "id": "account",
+        "title": "Account",
+        "href": "/settings/account"
+      }
+    ]
+  }
+]

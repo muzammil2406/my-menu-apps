@@ -1,0 +1,30 @@
+import {
+  Home,
+  ShoppingBag,
+  Users,
+  Settings,
+  BarChart,
+  FileText,
+  Package,
+  CreditCard,
+  Laptop,
+  Smartphone,
+  Headphones,
+  FileCog,
+  LucideIcon,
+} from 'lucide-react';
+
+export const iconMap: { [key: string]: LucideIcon } = {
+  Home,
+  ShoppingBag,
+  Users,
+  Settings,
+  BarChart,
+  FileText,
+  Package,
+  CreditCard,
+  Laptop,
+  Smartphone,
+  Headphones,
+  FileCog,
+};
